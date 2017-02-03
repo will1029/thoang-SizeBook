@@ -25,11 +25,13 @@ public class Person {
      * Everything is defaulted to not available (except name)
      *      -1.0 for numerical
      *      No comment available for text
+     *      Default for date is current date
      *
      * @param name The name of the person in text (string) format
      */
     public Person(String name) {
         this.name = name;
+        this.date = new Date();
         this.neck = -1.0;
         this.bust = -1.0;
         this.chest = -1.0;
@@ -40,17 +42,107 @@ public class Person {
     }
 
     /**
+     * Gets the person's name
+     * @return a string representing the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Gets the date, which lets the user know when the dimensions are valid
+     * @return a date with format of yyyy-mm-dd
+     */
+    public Date getDate() {
+        return date;
+    }
+
+    /**
+     * Get the neck circumference, in inches
+     * @return a number of type double representing the neck circumference
+     */
+    public double getNeck() {
+        return neck;
+    }
+
+    /**
+     * Get the bust circumference, in inches
+     * @return a number of type double representing the bust circumference
+     */
+    public double getBust() {
+        return bust;
+    }
+
+    /**
+     * Get the chest circumference, in inches
+     * @return a number of type double representing the chest circumference
+     */
+    public double getChest() {
+        return chest;
+    }
+
+    /**
+     * Get the waist circumference, in inches
+     * @return a number of type double representing the waist circumference
+     */
+    public double getWaist() {
+        return waist;
+    }
+
+    /**
+     * Get the hip circumference, in inches
+     * @return a number of type double representing the hip circumference
+     */
+    public double getHip() {
+        return hip;
+    }
+
+    /**
+     * Gets the inseam length in inches
+     * @return a double type representing the inseam length
+     */
+    public double getInseam() {
+        return inseam;
+    }
+
+    /**
      * Gets the text comment
-     *
      * @return a text comment
      */
     public String getComment() {
         return comment;
     }
 
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setNeck(double neck) {
+        this.neck = neck;
+    }
+
+    public void setBust(double bust) {
+        this.bust = bust;
+    }
+
+    public void setChest(double chest) {
+        this.chest = chest;
+    }
+
+    public void setWaist(double waist) {
+        this.waist = waist;
+    }
+
+    public void setHip(double hip) {
+        this.hip = hip;
+    }
+
+    public void setInseam(double inseam) {
+        this.inseam = inseam;
+    }
+
     /**
      * Sets the text comment
-     *
      * @param comment a text based comment
      */
     public void setComment(String comment) {

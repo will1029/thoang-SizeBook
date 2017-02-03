@@ -1,6 +1,7 @@
 package thoang.thoang_sizebook;
 
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -8,13 +9,28 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+
+import java.util.ArrayList;
 
 public class main extends AppCompatActivity {
+    private ArrayList<Person> records;
+    //private ArrayAdapter<Person> recAdap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        records = new ArrayList<Person>();
+        System.out.println("\n\n\n-----------------------------\n\n\n");
+        //System.out.println(records.get(0));
+
+        Person human = new Person("Bob");
+        records.add(human);
+        //recAdap.notifyDataSetChanged();
+        System.out.println(records.get(0) + "- 2");
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,8 +42,10 @@ public class main extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        */
     }
 
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -49,4 +67,5 @@ public class main extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    */
 }
