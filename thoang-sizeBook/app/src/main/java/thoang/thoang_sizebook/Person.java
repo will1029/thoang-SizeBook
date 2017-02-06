@@ -40,6 +40,14 @@ public class Person {
         this.inseam = -1.0;
         this.comment = "Not comment available.";
     }
+    /**
+     * Creates a string representing the person
+     */
+    @Override
+    public String toString() {
+        return(this.name + ": " + this.bust + ", " + this.chest +
+                ", " + this.waist +  ", " + this.inseam);
+    }
 
     /**
      * Gets the person's name
