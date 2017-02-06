@@ -121,30 +121,66 @@ public class Person {
         return comment;
     }
 
+    /**
+     * Set/change name
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Sets date in yyyy-mm-dd format
+     * @param date
+     */
     public void setDate(Date date) {
         this.date = date;
     }
 
+    /**
+     * Set neck circumference
+     * @param neck
+     */
     public void setNeck(double neck) {
         this.neck = neck;
     }
 
+    /**
+     * Set bust circumference
+     * @param bust
+     */
     public void setBust(double bust) {
         this.bust = bust;
     }
 
+    /**
+     * Set chest circumference
+     * @param chest
+     */
     public void setChest(double chest) {
         this.chest = chest;
     }
 
+    /**
+     * Set waist circumference
+     * @param waist
+     */
     public void setWaist(double waist) {
         this.waist = waist;
     }
 
+    /**
+     * Set hip circumference
+     * @param hip
+     */
     public void setHip(double hip) {
         this.hip = hip;
     }
 
+    /**
+     * Set inseam circumference
+     * @param inseam
+     */
     public void setInseam(double inseam) {
         this.inseam = inseam;
     }

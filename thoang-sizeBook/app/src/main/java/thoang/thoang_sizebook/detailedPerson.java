@@ -1,11 +1,22 @@
 package thoang.thoang_sizebook;
 
 /**
- * Created by Willi_000 on 2017-02-06.
+ * This class inherits from Person. It expands the toString method to
+ *  provide a more detailed description of the person.
+ *
+ *  @author thoang
+ *  @see Person
  */
 
-public class detailedPerson extends Person {
-    public detailedPerson(String name) {
+public class DetailedPerson extends Person {
+
+    /**
+     * Constructor
+     *
+     * @param name The name of the person
+     * @see Person
+     */
+    public DetailedPerson(String name) {
         super(name);
     }
 
@@ -14,7 +25,8 @@ public class detailedPerson extends Person {
      */
     @Override
     public String toString() {
-        String message = this.getName() + ":\nDate: " + this.getDate();
+        String message = "Name: " + this.getName() +
+                ":\nDate: " + this.getDate();
 
         if(this.getNeck() == -1.0) {
             message = message + "\nNeck: Not Avaliable";
