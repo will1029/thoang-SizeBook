@@ -352,11 +352,13 @@ public class main extends Activity {
      * Loads all records that were stored in a file
      */
     private void loadFromFile() {
+        System.out.println(records);
         records.clear();
         adapter.notifyDataSetChanged();
         Person savedHuman;
         String[] splitLine;
 
+        System.out.println(records);
         try {
             FileInputStream fis = openFileInput(FILENAME);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
@@ -365,10 +367,11 @@ public class main extends Activity {
             Person person = new Person("temp");
 
             while (line != null) {
+                records.remove(person);
+                adapter.notifyDataSetChanged();
                 line = in.readLine();
 
                 if(line == null) {
-                    records.remove(person);
                     continue;
                 }
 
